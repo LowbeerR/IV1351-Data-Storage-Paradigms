@@ -1,72 +1,4 @@
--- updates to lesson
-UPDATE lesson SET genre = 'rock', min_students = '3', max_students = '40'
-WHERE lesson_type = 'ensemble'
-AND room_id = '1' OR room_id = '2' OR room_id = '3'
-
-UPDATE lesson SET genre = 'gospel band', min_students = '3', max_students = '40'
-WHERE lesson_type = 'ensemble'
-AND room_id = '4' OR room_id = '5' OR room_id = '6'
-
-UPDATE lesson SET genre = 'pop', min_students = '3', max_students = '40'
-WHERE lesson_type = 'ensemble'
-AND room_id = '7' OR room_id = '8' OR room_id = '9'
-
-UPDATE lesson SET genre = 'edm', min_students = '3', max_students = '40'
-WHERE lesson_type = 'group'
-AND room_id = '10'
-
-UPDATE lesson SET instrument_type = 'percussion', min_students = '3', max_students = '40'
-WHERE lesson_type = 'group'
-AND room_id = '1' OR room_id = '2' OR room_id = '3'
-
-UPDATE lesson SET instrument_type = 'wind', min_students = '3', max_students = '40'
-WHERE lesson_type = 'group'
-AND room_id = '4' OR room_id = '5' OR room_id = '6'
-
-UPDATE lesson SET instrument_type = 'stringed', min_students = '3', max_students = '40'
-WHERE lesson_type = 'group'
-AND room_id = '7' OR room_id = '8' OR room_id = '9'
-
-UPDATE lesson SET instrument_type = 'electronic', min_students = '3', max_students = '40'
-WHERE lesson_type = 'group'
-AND room_id = '10'
-
-UPDATE lesson SET instrument_type = 'percussion', min_students = '1', max_students = '1'
-WHERE lesson_type = 'individual'
-AND room_id = '1' OR room_id = '2' OR room_id = '3'
-
-UPDATE lesson SET instrument_type = 'wind', min_students = '1', max_students = '1'
-WHERE lesson_type = 'individual'
-AND room_id = '4' OR room_id = '5' OR room_id = '6'
-
-UPDATE lesson SET instrument_type = 'stringed', min_students = '1', max_students = '1'
-WHERE lesson_type = 'individual'
-AND room_id = '7' OR room_id = '8' OR room_id = '9'
-
-UPDATE lesson SET instrument_type = 'electronic', min_students = '1', max_students = '1'
-WHERE lesson_type = 'individual'
-AND room_id = '10'
-
--- updates to instrument
-UPDATE instrument SET type = 'percussion'
-WHERE instrument = 'cowbell'
-OR instrument = 'triangle'
-OR instrument = 'drums'
-
-UPDATE instrument SET type = 'wind'
-WHERE instrument = 'flute'
-OR instrument = 'clarinet'
-
-UPDATE instrument SET type = 'stringed'
-WHERE instrument = 'piano'
-OR instrument = 'guitar'
-
-UPDATE instrument SET instrument = 'electric guitar'
-WHERE instrument = 'tambourine'
-
-UPDATE instrument SET type = 'electric'
-WHERE instrument = 'electric guitar'
--- adress
+  -- adress
 INSERT INTO adress (street,city,zip,country)
 VALUES
   ('Ap #869-3661 Dui Ave','Ludvika','78542','Sweden'),
@@ -184,6 +116,125 @@ VALUES
   ('Ap #439-5093 Ut Rd.','Gävle','45407','Sweden'),
   ('241-9293 Sem St.','Kungälv','46327','Sweden');
 
+-- instrument
+
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Fowler','JK652JDG','null','triangle','false'),
+  ('Castaneda','SU843DSS','null','cowbell','true'),
+  ('Dorsey','XI346BIO','null','clarinet','true'),
+  ('Lawson','TC558VMH','null','clarinet','false'),
+  ('Moon','GO516ZWM','null','clarinet','true'),
+  ('Dickson','XI457CKW','null','flute','true'),
+  ('Guerra','DU373GNT','null','cowbell','true'),
+  ('Graves','DV263RCU','null','clarinet','false'),
+  ('Weaver','IB463QUF','null','piano','true'),
+  ('Hendricks','VN198OVP','null','cowbell','false'),
+  ('Yates','RY218JMD','null','drums','false'),
+  ('West','CV187XSP','null','guitar','false'),
+  ('Reed','SR715WCY','null','cowbell','true'),
+  ('Prince','PA167UQR','null','triangle','false'),
+  ('Finley','CO666HQW','null','tambourine','true');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Cole','MX132OZP','null','piano','true'),
+  ('Pugh','QR026QBW','null','drums','true'),
+  ('Brooks','RH437HPP','null','piano','true'),
+  ('Aguilar','QX811UPW','null','guitar','false'),
+  ('Calderon','BW255LXH','null','flute','false'),
+  ('Yang','FU632GON','null','piano','true'),
+  ('French','NV586BWM','null','piano','true'),
+  ('Harrison','NI109HBC','null','piano','true'),
+  ('Castaneda','NY642OEX','null','piano','false'),
+  ('Nash','FH637BNQ','null','piano','true'),
+  ('Dillard','HW318JNJ','null','clarinet','false'),
+  ('Morales','YP894EET','null','drums','false'),
+  ('Bowers','WJ521VRQ','null','flute','true'),
+  ('Kane','QK665IXQ','null','tambourine','true'),
+  ('Rowland','YT721PJV','null','clarinet','true');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Cole','BM142IIQ','null','flute','false'),
+  ('Jones','KB712TRT','null','guitar','true'),
+  ('Baker','QP673MOV','null','drums','false'),
+  ('Clayton','ID368SHQ','null','flute','false'),
+  ('Glover','LN186EIY','null','cowbell','true'),
+  ('Moore','CS813LGO','null','piano','true'),
+  ('Boyer','VJ428SXQ','null','piano','false'),
+  ('Walton','BW124DOF','null','guitar','false'),
+  ('Francis','YC337ALY','null','clarinet','false'),
+  ('Mcdowell','RI839RYY','null','guitar','false'),
+  ('Ryan','QQ108WIP','null','flute','true'),
+  ('Evans','BZ342WLI','null','clarinet','false'),
+  ('Guthrie','IQ168EYN','null','cowbell','true'),
+  ('Carson','MW757XKL','null','drums','false'),
+  ('Torres','RN314PWQ','null','guitar','false');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('James','SF971TLL','null','cowbell','false'),
+  ('Lott','LE678YQV','null','drums','false'),
+  ('Hines','CP110LFS','null','triangle','false'),
+  ('Foster','II804KEI','null','piano','true'),
+  ('Ellis','PJ458GLY','null','drums','false');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Adams','SD117XIK','null','flute','false'),
+  ('Austin','RG418WHI','null','drums','false'),
+  ('Gibson','NC651ESK','null','flute','true'),
+  ('Reeves','NP080NXH','null','cowbell','false'),
+  ('Henry','RT176WKH','null','clarinet','true'),
+  ('Spence','KR642LAL','null','tambourine','false'),
+  ('Burch','GD479RNI','null','clarinet','false'),
+  ('Stanley','LF778CNV','null','cowbell','true'),
+  ('Rodgers','JM312SOT','null','cowbell','false'),
+  ('Skinner','VD628YIN','null','piano','true'),
+  ('Huber','UO351UIE','null','tambourine','true'),
+  ('Hurley','KX823OFU','null','cowbell','false'),
+  ('Navarro','MO626VVO','null','triangle','true'),
+  ('Cooke','BY732SLN','null','piano','true'),
+  ('Fuller','VS242RSM','null','piano','false');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Phillips','TO217EBH','null','guitar','false'),
+  ('Giles','WH563ESZ','null','clarinet','true'),
+  ('Russell','OO345LWV','null','triangle','false'),
+  ('Morgan','NP846LNA','null','tambourine','false'),
+  ('Mcneil','MV241HWP','null','triangle','false'),
+  ('Grimes','OH942DIN','null','cowbell','true'),
+  ('Owens','AQ118WVH','null','guitar','true'),
+  ('Mckay','IQ795ELC','null','guitar','true'),
+  ('Wright','CL324FFB','null','guitar','true'),
+  ('Kennedy','WU697LLD','null','clarinet','false'),
+  ('Guerra','JH286PCQ','null','piano','true'),
+  ('Farrell','XR412EBP','null','drums','true'),
+  ('Mueller','WI898YIX','null','triangle','false'),
+  ('Neal','WL244WNK','null','piano','false'),
+  ('Delacruz','MA615QVC','null','clarinet','false');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Curry','BO800GYL','null','tambourine','false'),
+  ('Ashley','QN953OBO','null','flute','true'),
+  ('Durham','RC703HUM','null','triangle','false'),
+  ('Leon','NZ250VII','null','triangle','false'),
+  ('Wooten','OF205SYY','null','triangle','true'),
+  ('Carson','KA625HTI','null','clarinet','false'),
+  ('Bennett','TX951OBO','null','guitar','true'),
+  ('Donovan','QC100HBT','null','piano','true'),
+  ('Beasley','UC681XIS','null','tambourine','true'),
+  ('Arnold','ER122CNY','null','tambourine','false'),
+  ('Lang','TR512BES','null','triangle','false'),
+  ('Farley','EB167GER','null','tambourine','false'),
+  ('Vaughn','KG682YHL','null','piano','true'),
+  ('Castro','XU363TIW','null','triangle','true'),
+  ('Callahan','JF683GNY','null','cowbell','true');
+INSERT INTO instrument (brand,model,type,instrument,in_stock)
+VALUES
+  ('Small','JI573HFF','null','piano','false'),
+  ('Avila','SS372GIO','null','cowbell','false'),
+  ('Rowland','JA995MLY','null','cowbell','false'),
+  ('Mitchell','SF753QAW','null','triangle','true'),
+  ('Knight','JK787UVO','null','cowbell','true');
+
 -- student
 INSERT INTO student (contact_person_phone_nr,first_name,last_name,age,person_number,phone_number,email_adress,adress_id)
 VALUES
@@ -268,7 +319,6 @@ VALUES
   ('46726866419','Yen','Fleming',31,'997748222766','46463761383','ante.bibendum@google.com',57),
   ('46326825474','Portia','Young',42,'549855124373','46761051563','tellus.nunc@gmail.net',70);
 
-
 -- teacher
 INSERT INTO teacher (can_teach_ensembles,is_available,first_name,last_name,person_number,age,phone_number,email_adress,adress_id)
 VALUES
@@ -288,74 +338,10 @@ VALUES
   ('false','false','Zia','Ayala','212206814212',30,'46148554584','amet@outlook.net',89),
   ('true','false','Kermit','Houston','685553243556',46,'46748344758','nunc.sit@outlook.se',84);
 
-
--- rental
-INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
-VALUES
-  ('22-08-19','12_months','true',148,39,19),
-  ('22-11-21','12_months','true',217,75,58),
-  ('22-07-16','12_months','true',299,6,59),
-  ('23-09-06','12_months','true',225,94,19),
-  ('22-02-04','12_months','false',199,57,28),
-  ('23-01-02','12_months','true',120,48,45),
-  ('22-08-22','12_months','false',135,17,2),
-  ('23-10-08','12_months','false',239,98,62),
-  ('21-12-09','12_months','false',226,89,3),
-  ('22-08-11','12_months','true',184,12,35),
-  ('22-07-13','12_months','false',153,41,13),
-  ('23-07-10','12_months','false',269,12,50),
-  ('23-06-09','12_months','false',132,24,31),
-  ('22-08-02','12_months','false',123,35,16),
-  ('21-12-19','12_months','true',206,20,27);
-INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
-VALUES
-  ('23-07-08','12_months','false',191,7,6),
-  ('23-07-09','12_months','false',289,44,28),
-  ('22-04-18','12_months','false',237,87,30),
-  ('22-03-09','12_months','true',180,29,12),
-  ('22-01-12','12_months','false',289,98,44),
-  ('22-09-11','12_months','false',181,58,47),
-  ('22-03-12','12_months','false',287,3,19),
-  ('22-09-27','12_months','true',285,23,41),
-  ('23-03-23','12_months','true',111,49,52),
-  ('22-01-26','12_months','false',265,10,25),
-  ('22-03-28','12_months','true',291,16,66),
-  ('22-10-09','12_months','false',186,75,11),
-  ('23-07-11','12_months','false',247,97,64),
-  ('23-03-19','12_months','false',273,82,42),
-  ('22-05-04','12_months','true',219,92,35);
-INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
-VALUES
-  ('23-04-03','12_months','false',222,72,42),
-  ('23-01-10','12_months','false',147,18,24),
-  ('23-03-03','12_months','true',234,62,58),
-  ('23-04-06','12_months','false',215,99,43),
-  ('23-05-10','12_months','true',193,1,58),
-  ('22-01-19','12_months','false',169,35,35),
-  ('23-01-21','12_months','false',145,64,62),
-  ('22-02-13','12_months','false',108,64,35),
-  ('23-04-24','12_months','true',181,40,34),
-  ('21-12-02','12_months','true',265,99,47),
-  ('21-12-04','12_months','true',171,41,37),
-  ('22-06-04','12_months','true',234,25,33),
-  ('23-07-04','12_months','false',250,93,68),
-  ('23-06-06','12_months','false',267,12,35),
-  ('22-01-06','12_months','true',148,79,69);
-INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
-VALUES
-  ('23-09-18','12_months','false',144,23,47),
-  ('23-11-19','12_months','true',241,24,36),
-  ('23-01-27','12_months','false',256,29,58),
-  ('22-03-10','12_months','true',142,76,15),
-  ('22-06-29','12_months','false',289,75,58);
-
-
-
-
 -- pricing_scheme
 INSERT INTO pricing_scheme (enseble_price,sibling_discount)
 VALUES
-('500','10%')
+('500','10%');
 
 -- skill_level
 INSERT INTO skill_level (skill_level)
@@ -372,7 +358,388 @@ INSERT INTO individual_lesson_price (price, pricing_scheme_id,skill_level_id)
 VALUES
 ('150',1,1),
 ('150',1,2),
-('250',1,3)
+('250',1,3);
+
+
+-- sibling_person_number
+
+INSERT INTO sibling_person_number (student_id,sibling_person_number)
+VALUES
+  (66,'492708415769'),
+  (3,'637711634445'),
+  (17,'468185923656'),
+  (3,'770587248801'),
+  (29,'144975044167'),
+  (68,'532301651855'),
+  (24,'866166124238'),
+  (40,'373833538141'),
+  (18,'235737432560'),
+  (54,'532301651855'),
+  (66,'882047723234'),
+  (13,'284937554361'),
+  (46,'787062614886'),
+  (62,'101304918036');
+INSERT INTO sibling_person_number (student_id,sibling_person_number)
+VALUES
+  (13,'532301651855'),
+  (18,'532301651855'),
+  (31,'666368736493'),
+  (52,'224822735438'),
+  (3,'532301651855');
+
+-- lesson
+
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (4,'ensemble','22-10-16','13:00','null','null','null','null',1,97,12,2),
+  (2,'ensemble','22-06-06','17:50','null','null','null','null',1,91,9,2),
+  (5,'ensemble','22-04-12','16:21','null','null','null','null',1,91,15,1),
+  (2,'group','23-10-31','15:08','null','null','null','null',1,99,15,2),
+  (5,'ensemble','22-03-30','06:45','null','null','null','null',1,93,12,3),
+  (10,'group','23-08-20','13:53','null','null','null','null',1,93,3,3),
+  (4,'group','23-07-11','10:54','null','null','null','null',1,96,13,1),
+  (6,'ensemble','23-01-17','16:36','null','null','null','null',1,97,12,2),
+  (1,'group','22-07-11','12:31','null','null','null','null',1,92,14,3),
+  (4,'group','22-12-26','19:16','null','null','null','null',1,99,3,2),
+  (2,'individual','22-10-18','11:46','null','null','null','null',1,94,7,2),
+  (10,'group','23-06-25','06:17','null','null','null','null',1,93,2,1),
+  (4,'group','22-08-16','14:35','null','null','null','null',1,98,5,3),
+  (8,'ensemble','22-05-01','17:32','null','null','null','null',1,96,6,2),
+  (4,'individual','23-05-31','09:36','null','null','null','null',1,93,4,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (6,'individual','23-07-29','11:00','null','null','null','null',1,90,8,2),
+  (7,'group','22-08-08','06:35','null','null','null','null',1,97,5,3),
+  (6,'individual','23-02-05','13:03','null','null','null','null',1,95,13,2),
+  (8,'group','23-09-29','08:18','null','null','null','null',1,96,1,2),
+  (10,'group','22-06-15','08:58','null','null','null','null',1,95,12,2),
+  (3,'group','23-07-13','18:18','null','null','null','null',1,99,10,1),
+  (3,'individual','22-06-25','16:38','null','null','null','null',1,97,12,3),
+  (3,'group','23-01-06','19:00','null','null','null','null',1,90,7,3),
+  (7,'ensemble','23-02-15','13:15','null','null','null','null',1,91,4,2),
+  (7,'ensemble','22-10-06','08:13','null','null','null','null',1,100,11,3),
+  (3,'ensemble','22-07-18','08:53','null','null','null','null',1,92,2,2),
+  (9,'group','22-05-22','20:12','null','null','null','null',1,97,11,3),
+  (9,'ensemble','23-10-17','14:08','null','null','null','null',1,98,3,2),
+  (5,'group','22-08-31','19:40','null','null','null','null',1,96,7,2),
+  (9,'group','23-04-13','12:14','null','null','null','null',1,97,10,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (5,'individual','23-10-16','15:58','null','null','null','null',1,95,4,2),
+  (8,'individual','23-04-12','06:46','null','null','null','null',1,94,9,2),
+  (4,'group','23-10-04','19:48','null','null','null','null',1,91,11,2),
+  (5,'ensemble','23-11-03','11:03','null','null','null','null',1,94,13,3),
+  (5,'ensemble','23-01-06','10:26','null','null','null','null',1,99,12,2),
+  (8,'ensemble','22-08-02','09:04','null','null','null','null',1,98,7,2),
+  (8,'ensemble','23-10-20','17:01','null','null','null','null',1,91,14,2),
+  (2,'group','23-01-13','13:34','null','null','null','null',1,100,11,3),
+  (9,'ensemble','22-11-10','18:22','null','null','null','null',1,99,2,3),
+  (2,'individual','23-01-06','19:47','null','null','null','null',1,99,9,2),
+  (6,'individual','22-11-26','09:23','null','null','null','null',1,96,13,2),
+  (2,'ensemble','23-11-13','20:12','null','null','null','null',1,91,13,2),
+  (3,'individual','23-01-03','13:14','null','null','null','null',1,95,3,3),
+  (2,'ensemble','23-07-21','19:31','null','null','null','null',1,92,11,2),
+  (2,'individual','23-11-14','15:13','null','null','null','null',1,93,5,3);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'ensemble','22-09-19','20:14','null','null','null','null',1,92,11,1),
+  (7,'individual','22-10-11','08:08','null','null','null','null',1,96,10,1),
+  (9,'individual','22-08-04','14:01','null','null','null','null',1,92,8,2),
+  (3,'group','23-10-15','20:11','null','null','null','null',1,100,6,1),
+  (2,'individual','22-07-26','16:55','null','null','null','null',1,96,1,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (6,'ensemble','23-01-21','08:04','null','null','null','null',1,99,2,3),
+  (9,'ensemble','23-02-28','07:30','null','null','null','null',1,97,7,1),
+  (8,'individual','22-03-23','09:54','null','null','null','null',1,100,8,2),
+  (10,'individual','22-11-19','07:35','null','null','null','null',1,90,11,2),
+  (6,'ensemble','22-05-06','12:35','null','null','null','null',1,95,10,2),
+  (4,'group','23-07-03','17:10','null','null','null','null',1,94,2,1),
+  (9,'group','22-03-07','08:37','null','null','null','null',1,95,1,2),
+  (2,'ensemble','22-11-22','09:00','null','null','null','null',1,91,8,1),
+  (4,'individual','23-10-24','18:22','null','null','null','null',1,95,3,3),
+  (7,'ensemble','23-01-20','07:00','null','null','null','null',1,97,5,1),
+  (1,'individual','23-02-23','17:48','null','null','null','null',1,92,14,2),
+  (2,'group','22-04-14','07:31','null','null','null','null',1,100,12,3),
+  (7,'group','23-02-04','08:45','null','null','null','null',1,92,12,2),
+  (5,'individual','22-05-25','16:02','null','null','null','null',1,96,7,2),
+  (6,'individual','22-10-09','17:29','null','null','null','null',1,93,10,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (6,'individual','22-12-25','20:35','null','null','null','null',1,94,6,3),
+  (4,'ensemble','22-04-12','07:59','null','null','null','null',1,97,10,3),
+  (3,'ensemble','22-09-30','13:57','null','null','null','null',1,94,12,2),
+  (6,'group','23-10-27','13:57','null','null','null','null',1,98,3,3),
+  (5,'group','23-05-20','07:16','null','null','null','null',1,95,3,1),
+  (4,'individual','23-05-10','13:10','null','null','null','null',1,90,3,3),
+  (1,'ensemble','23-02-17','18:20','null','null','null','null',1,93,10,1),
+  (10,'individual','23-10-27','16:41','null','null','null','null',1,97,10,3),
+  (6,'group','23-01-18','10:27','null','null','null','null',1,100,9,3),
+  (8,'ensemble','22-12-22','09:26','null','null','null','null',1,100,5,3),
+  (9,'ensemble','23-11-06','16:10','null','null','null','null',1,99,9,2),
+  (4,'ensemble','22-10-30','09:26','null','null','null','null',1,97,8,3),
+  (1,'ensemble','23-01-29','14:02','null','null','null','null',1,98,7,2),
+  (4,'ensemble','23-06-24','19:09','null','null','null','null',1,99,11,3),
+  (6,'group','22-06-20','06:16','null','null','null','null',1,92,8,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (1,'ensemble','23-06-16','16:31','null','null','null','null',1,92,8,2),
+  (1,'ensemble','23-01-30','09:02','null','null','null','null',1,93,12,2),
+  (6,'ensemble','22-09-29','20:59','null','null','null','null',1,99,3,2),
+  (9,'ensemble','22-07-20','10:02','null','null','null','null',1,92,15,3),
+  (4,'group','22-07-24','17:39','null','null','null','null',1,90,11,2),
+  (2,'group','23-09-10','12:45','null','null','null','null',1,99,11,2),
+  (2,'ensemble','22-10-05','18:06','null','null','null','null',1,93,9,2),
+  (4,'ensemble','22-04-29','06:43','null','null','null','null',1,93,5,2),
+  (10,'group','22-11-20','11:16','null','null','null','null',1,91,8,2),
+  (5,'ensemble','23-06-16','07:31','null','null','null','null',1,91,3,2),
+  (8,'ensemble','22-08-02','17:50','null','null','null','null',1,98,11,2),
+  (8,'group','23-07-08','10:22','null','null','null','null',1,100,2,2),
+  (3,'ensemble','23-01-05','12:35','null','null','null','null',1,95,2,1),
+  (9,'individual','23-11-19','13:22','null','null','null','null',1,91,15,2),
+  (3,'ensemble','23-09-23','16:58','null','null','null','null',1,92,13,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'ensemble','23-10-22','08:50','null','null','null','null',1,95,9,1),
+  (3,'group','23-07-05','18:35','null','null','null','null',1,97,3,2),
+  (4,'ensemble','23-01-01','20:42','null','null','null','null',1,98,12,2),
+  (6,'group','22-06-04','09:42','null','null','null','null',1,90,14,2),
+  (8,'ensemble','23-09-30','11:38','null','null','null','null',1,99,9,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'group','23-04-30','17:52','null','null','null','null',1,96,13,1),
+  (4,'individual','22-03-08','16:17','null','null','null','null',1,92,10,2),
+  (2,'ensemble','23-07-20','17:40','null','null','null','null',1,97,13,2),
+  (2,'group','23-07-02','09:31','null','null','null','null',1,96,4,3),
+  (7,'individual','23-01-14','07:10','null','null','null','null',1,94,3,2),
+  (9,'group','22-04-02','08:44','null','null','null','null',1,95,1,2),
+  (7,'ensemble','23-05-05','06:14','null','null','null','null',1,94,2,3),
+  (4,'ensemble','23-01-27','15:11','null','null','null','null',1,94,7,2),
+  (5,'ensemble','22-11-30','11:53','null','null','null','null',1,97,8,3),
+  (3,'individual','23-02-04','13:03','null','null','null','null',1,92,12,2),
+  (9,'individual','23-09-13','19:41','null','null','null','null',1,100,5,3),
+  (6,'individual','23-09-19','08:03','null','null','null','null',1,95,12,3),
+  (5,'individual','23-07-19','12:14','null','null','null','null',1,96,3,3),
+  (7,'ensemble','22-10-12','06:03','null','null','null','null',1,93,14,2),
+  (8,'group','23-08-19','12:02','null','null','null','null',1,91,10,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (8,'individual','23-09-17','17:00','null','null','null','null',1,93,12,3),
+  (6,'individual','22-04-22','13:56','null','null','null','null',1,93,2,2),
+  (3,'individual','22-05-31','14:29','null','null','null','null',1,97,9,3),
+  (2,'ensemble','23-03-09','06:53','null','null','null','null',1,98,13,1),
+  (5,'individual','23-02-08','07:45','null','null','null','null',1,96,7,3),
+  (1,'group','23-07-18','15:27','null','null','null','null',1,98,4,3),
+  (3,'individual','23-09-08','08:02','null','null','null','null',1,96,8,1),
+  (7,'ensemble','22-07-25','10:01','null','null','null','null',1,98,15,2),
+  (4,'group','23-06-16','10:45','null','null','null','null',1,95,13,3),
+  (8,'group','23-11-02','14:49','null','null','null','null',1,95,9,2),
+  (1,'group','23-10-03','06:02','null','null','null','null',1,98,6,1),
+  (9,'individual','23-03-21','19:39','null','null','null','null',1,98,11,2),
+  (7,'group','22-06-16','15:23','null','null','null','null',1,98,8,2),
+  (7,'ensemble','23-04-25','12:21','null','null','null','null',1,95,13,1),
+  (8,'individual','22-09-14','07:47','null','null','null','null',1,98,4,3);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (1,'group','23-07-31','06:11','null','null','null','null',1,93,11,1),
+  (6,'group','22-10-18','13:16','null','null','null','null',1,97,6,2),
+  (9,'ensemble','23-09-08','13:42','null','null','null','null',1,91,7,2),
+  (5,'ensemble','23-02-15','17:25','null','null','null','null',1,95,10,3),
+  (9,'group','23-03-19','10:17','null','null','null','null',1,91,12,2),
+  (7,'group','23-04-24','13:51','null','null','null','null',1,99,13,2),
+  (2,'individual','22-07-11','07:03','null','null','null','null',1,92,2,1),
+  (1,'ensemble','23-10-15','11:48','null','null','null','null',1,99,2,2),
+  (2,'ensemble','22-06-24','06:58','null','null','null','null',1,97,6,3),
+  (4,'group','23-09-14','19:32','null','null','null','null',1,96,13,2),
+  (7,'group','22-09-25','19:40','null','null','null','null',1,92,9,3),
+  (2,'group','22-10-27','20:35','null','null','null','null',1,98,10,2),
+  (4,'group','22-08-02','20:49','null','null','null','null',1,94,9,2),
+  (6,'individual','23-07-30','06:50','null','null','null','null',1,94,15,1),
+  (7,'individual','23-07-23','09:50','null','null','null','null',1,92,14,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (9,'individual','23-09-10','08:37','null','null','null','null',1,97,11,2),
+  (6,'individual','23-03-24','16:12','null','null','null','null',1,97,9,1),
+  (6,'group','22-03-18','06:29','null','null','null','null',1,96,8,2),
+  (4,'individual','22-08-15','20:20','null','null','null','null',1,91,12,3),
+  (7,'individual','23-04-18','19:03','null','null','null','null',1,94,14,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'individual','23-11-08','12:21','null','null','null','null',1,91,3,2),
+  (4,'individual','22-05-31','11:44','null','null','null','null',1,91,13,1),
+  (2,'group','23-07-08','12:09','null','null','null','null',1,94,6,2),
+  (8,'ensemble','22-10-05','16:39','null','null','null','null',1,97,8,2),
+  (6,'individual','22-06-07','17:04','null','null','null','null',1,95,3,3),
+  (1,'individual','22-04-12','16:24','null','null','null','null',1,91,9,2),
+  (2,'individual','23-03-10','09:51','null','null','null','null',1,99,11,3),
+  (4,'group','22-09-06','12:03','null','null','null','null',1,91,2,2),
+  (8,'group','22-04-10','17:36','null','null','null','null',1,92,10,3),
+  (8,'ensemble','23-05-15','14:24','null','null','null','null',1,97,7,2),
+  (2,'group','23-07-26','14:16','null','null','null','null',1,96,10,1),
+  (3,'group','22-10-10','20:36','null','null','null','null',1,90,6,3),
+  (5,'ensemble','23-03-27','11:31','null','null','null','null',1,98,11,2),
+  (8,'ensemble','22-08-14','06:16','null','null','null','null',1,93,1,2),
+  (5,'group','22-10-20','19:45','null','null','null','null',1,97,10,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'ensemble','22-12-24','11:46','null','null','null','null',1,97,4,2),
+  (2,'group','23-09-08','20:48','null','null','null','null',1,98,9,1),
+  (1,'group','23-09-02','14:43','null','null','null','null',1,96,5,2),
+  (10,'group','22-07-16','14:40','null','null','null','null',1,94,8,3),
+  (6,'group','22-04-13','09:06','null','null','null','null',1,93,10,2),
+  (6,'group','22-07-24','16:38','null','null','null','null',1,91,6,2),
+  (8,'ensemble','22-09-25','20:48','null','null','null','null',1,94,12,2),
+  (5,'group','23-07-17','09:27','null','null','null','null',1,95,6,3),
+  (3,'group','23-07-05','11:56','null','null','null','null',1,97,12,3),
+  (4,'individual','23-01-10','13:48','null','null','null','null',1,96,9,2),
+  (8,'individual','23-08-13','08:50','null','null','null','null',1,97,15,2),
+  (6,'group','22-12-25','17:00','null','null','null','null',1,91,4,2),
+  (4,'individual','22-10-29','19:30','null','null','null','null',1,98,1,2),
+  (9,'ensemble','23-01-17','12:58','null','null','null','null',1,96,2,3),
+  (4,'individual','23-09-27','20:00','null','null','null','null',1,96,11,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (9,'ensemble','22-08-08','19:15','null','null','null','null',1,92,2,2),
+  (1,'individual','23-05-03','10:52','null','null','null','null',1,95,9,2),
+  (6,'individual','22-03-08','08:21','null','null','null','null',1,93,11,3),
+  (1,'group','23-06-19','17:03','null','null','null','null',1,97,13,1),
+  (9,'group','23-08-26','11:03','null','null','null','null',1,100,10,3),
+  (3,'ensemble','23-06-19','16:53','null','null','null','null',1,91,4,2),
+  (1,'ensemble','23-10-01','13:30','null','null','null','null',1,94,5,2),
+  (4,'group','22-11-14','17:09','null','null','null','null',1,90,13,2),
+  (4,'group','23-09-15','11:34','null','null','null','null',1,90,2,3),
+  (4,'ensemble','23-08-27','17:55','null','null','null','null',1,92,2,3),
+  (5,'individual','23-11-12','19:02','null','null','null','null',1,98,6,2),
+  (6,'group','22-05-20','07:40','null','null','null','null',1,94,8,2),
+  (3,'individual','23-07-05','12:06','null','null','null','null',1,92,10,3),
+  (4,'group','23-05-04','17:13','null','null','null','null',1,99,5,2),
+  (8,'individual','23-08-18','14:32','null','null','null','null',1,97,4,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'group','23-08-20','15:39','null','null','null','null',1,93,14,1),
+  (7,'individual','22-03-04','16:20','null','null','null','null',1,93,11,2),
+  (3,'individual','22-07-06','08:30','null','null','null','null',1,93,3,1),
+  (5,'individual','23-08-29','10:07','null','null','null','null',1,98,15,2),
+  (5,'ensemble','23-11-02','20:06','null','null','null','null',1,97,7,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (8,'individual','22-06-07','19:34','null','null','null','null',1,94,7,2),
+  (8,'group','23-04-27','11:19','null','null','null','null',1,96,3,1),
+  (8,'group','23-01-21','12:27','null','null','null','null',1,92,6,1),
+  (3,'group','23-10-12','08:25','null','null','null','null',1,98,8,2),
+  (8,'group','23-09-24','20:09','null','null','null','null',1,96,11,2),
+  (3,'individual','22-03-23','11:49','null','null','null','null',1,91,14,3),
+  (8,'individual','22-07-24','20:45','null','null','null','null',1,95,4,2),
+  (9,'ensemble','23-08-23','12:52','null','null','null','null',1,94,7,2),
+  (7,'ensemble','22-08-14','10:38','null','null','null','null',1,93,8,2),
+  (4,'individual','23-10-23','12:30','null','null','null','null',1,94,15,2),
+  (1,'individual','23-05-08','17:03','null','null','null','null',1,90,4,1),
+  (7,'individual','22-07-24','12:07','null','null','null','null',1,95,6,3),
+  (8,'individual','23-08-09','18:57','null','null','null','null',1,97,13,3),
+  (6,'ensemble','22-05-16','17:09','null','null','null','null',1,92,3,3),
+  (4,'individual','23-06-17','14:35','null','null','null','null',1,92,2,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (5,'group','22-07-24','12:05','null','null','null','null',1,92,10,2),
+  (1,'group','22-04-30','14:44','null','null','null','null',1,99,13,2),
+  (7,'individual','22-03-08','17:32','null','null','null','null',1,95,10,1),
+  (9,'ensemble','23-08-24','16:37','null','null','null','null',1,99,3,2),
+  (7,'ensemble','23-05-01','19:59','null','null','null','null',1,98,4,2),
+  (7,'group','23-11-15','11:13','null','null','null','null',1,91,8,2),
+  (2,'ensemble','22-03-02','12:11','null','null','null','null',1,91,7,3),
+  (6,'group','23-08-11','14:54','null','null','null','null',1,97,3,2),
+  (3,'ensemble','23-07-07','08:42','null','null','null','null',1,96,8,3),
+  (4,'individual','23-08-28','18:28','null','null','null','null',1,99,9,2),
+  (3,'individual','23-09-27','18:55','null','null','null','null',1,97,6,2),
+  (2,'ensemble','22-09-11','17:55','null','null','null','null',1,99,9,1),
+  (6,'ensemble','22-11-30','19:59','null','null','null','null',1,97,9,1),
+  (7,'group','23-06-18','10:59','null','null','null','null',1,94,3,1),
+  (2,'ensemble','23-02-12','11:09','null','null','null','null',1,97,10,2);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (5,'individual','23-07-28','08:37','null','null','null','null',1,95,7,3),
+  (3,'group','23-06-07','16:21','null','null','null','null',1,94,12,2),
+  (8,'group','23-06-21','14:21','null','null','null','null',1,99,3,1),
+  (6,'group','23-02-21','15:21','null','null','null','null',1,96,15,2),
+  (1,'ensemble','23-09-01','12:29','null','null','null','null',1,97,2,2),
+  (8,'ensemble','22-12-22','16:17','null','null','null','null',1,91,7,3),
+  (6,'ensemble','23-02-06','10:07','null','null','null','null',1,95,6,2),
+  (6,'ensemble','22-04-10','12:57','null','null','null','null',1,100,10,2),
+  (5,'individual','23-06-06','17:12','null','null','null','null',1,100,3,2),
+  (7,'ensemble','22-09-30','16:58','null','null','null','null',1,96,8,2),
+  (5,'group','22-11-15','07:56','null','null','null','null',1,95,8,1),
+  (5,'ensemble','22-12-13','11:23','null','null','null','null',1,97,12,3),
+  (5,'ensemble','22-06-03','12:30','null','null','null','null',1,95,10,2),
+  (8,'ensemble','23-11-12','07:35','null','null','null','null',1,94,10,2),
+  (5,'individual','22-12-19','06:36','null','null','null','null',1,98,14,3);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (10,'group','22-07-31','06:02','null','null','null','null',1,91,4,2),
+  (1,'individual','23-02-02','18:27','null','null','null','null',1,93,2,1),
+  (6,'group','23-05-21','08:57','null','null','null','null',1,92,5,1),
+  (4,'group','22-09-14','11:35','null','null','null','null',1,97,2,2),
+  (9,'ensemble','23-07-25','15:25','null','null','null','null',1,99,13,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (3,'group','22-07-08','20:58','null','null','null','null',1,90,7,2),
+  (2,'group','23-04-09','06:57','null','null','null','null',1,95,9,3),
+  (5,'ensemble','23-08-11','13:21','null','null','null','null',1,93,3,3),
+  (2,'group','23-10-22','07:36','null','null','null','null',1,92,8,2),
+  (2,'individual','22-11-18','17:00','null','null','null','null',1,91,1,3),
+  (8,'individual','22-11-24','13:14','null','null','null','null',1,91,11,1),
+  (3,'group','22-09-29','06:09','null','null','null','null',1,100,2,1),
+  (8,'ensemble','22-04-09','20:10','null','null','null','null',1,99,10,3),
+  (5,'ensemble','23-03-08','12:17','null','null','null','null',1,94,4,2),
+  (9,'individual','22-12-29','13:08','null','null','null','null',1,94,2,1),
+  (3,'individual','23-02-11','10:12','null','null','null','null',1,97,10,1),
+  (4,'group','22-09-28','16:22','null','null','null','null',1,95,3,2),
+  (1,'ensemble','23-05-19','11:58','null','null','null','null',1,98,3,2),
+  (2,'group','23-07-25','14:48','null','null','null','null',1,96,9,2),
+  (2,'group','23-08-24','07:55','null','null','null','null',1,91,5,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (9,'group','23-07-16','11:01','null','null','null','null',1,95,4,1),
+  (7,'group','22-08-04','19:43','null','null','null','null',1,97,6,2),
+  (3,'ensemble','23-09-10','07:45','null','null','null','null',1,95,10,1),
+  (3,'group','23-07-03','11:38','null','null','null','null',1,99,3,2),
+  (1,'ensemble','23-09-19','16:09','null','null','null','null',1,98,1,1),
+  (3,'group','23-03-23','15:01','null','null','null','null',1,93,14,2),
+  (4,'ensemble','23-07-24','15:02','null','null','null','null',1,93,9,3),
+  (6,'individual','22-10-13','10:22','null','null','null','null',1,95,12,3),
+  (9,'individual','22-08-30','16:24','null','null','null','null',1,91,9,2),
+  (5,'group','23-08-03','11:48','null','null','null','null',1,99,10,2),
+  (10,'ensemble','22-05-03','20:14','null','null','null','null',1,100,9,2),
+  (6,'ensemble','23-06-20','15:30','null','null','null','null',1,96,15,1),
+  (9,'individual','23-11-06','10:26','null','null','null','null',1,99,8,2),
+  (6,'group','23-03-29','19:30','null','null','null','null',1,95,5,3),
+  (4,'group','23-04-18','15:53','null','null','null','null',1,93,7,3);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (7,'ensemble','22-12-19','19:34','null','null','null','null',1,95,6,1),
+  (10,'ensemble','22-10-04','13:39','null','null','null','null',1,97,5,3),
+  (5,'individual','22-11-16','08:34','null','null','null','null',1,98,13,1),
+  (9,'ensemble','22-12-06','16:42','null','null','null','null',1,92,9,2),
+  (3,'individual','23-06-26','08:23','null','null','null','null',1,98,4,3),
+  (6,'ensemble','23-11-09','07:59','null','null','null','null',1,95,6,1),
+  (3,'group','22-08-14','07:34','null','null','null','null',1,94,9,3),
+  (6,'ensemble','22-03-10','08:21','null','null','null','null',1,93,3,3),
+  (4,'ensemble','23-01-01','08:38','null','null','null','null',1,96,10,1),
+  (5,'group','22-12-28','11:50','null','null','null','null',1,96,4,2),
+  (6,'group','23-01-12','13:58','null','null','null','null',1,94,15,1),
+  (1,'group','23-11-10','08:10','null','null','null','null',1,92,14,1),
+  (9,'group','23-08-07','11:16','null','null','null','null',1,90,15,2),
+  (3,'group','22-12-07','07:32','null','null','null','null',1,96,9,1),
+  (3,'group','22-12-30','07:28','null','null','null','null',1,95,10,1);
+INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
+VALUES
+  (7,'ensemble','23-05-09','09:00','null','null','null','null',1,96,9,2),
+  (2,'individual','23-08-15','12:24','null','null','null','null',1,91,7,2),
+  (7,'group','23-06-25','20:43','null','null','null','null',1,97,7,3),
+  (9,'group','22-03-21','19:39','null','null','null','null',1,97,5,3),
+  (9,'group','23-03-19','09:58','null','null','null','null',1,100,9,2);
+
+
+
 -- student_lesson
 INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
@@ -953,6 +1320,141 @@ VALUES
   (47,257),
   (38,293);
 
+-- updates to lesson
+UPDATE lesson SET genre = 'rock', min_students = '3', max_students = '40'
+WHERE lesson_type = 'ensemble'
+AND room_id = '1' OR room_id = '2' OR room_id = '3';
+
+UPDATE lesson SET genre = 'gospel band', min_students = '3', max_students = '40'
+WHERE lesson_type = 'ensemble'
+AND room_id = '4' OR room_id = '5' OR room_id = '6';
+
+UPDATE lesson SET genre = 'pop', min_students = '3', max_students = '40'
+WHERE lesson_type = 'ensemble'
+AND room_id = '7' OR room_id = '8' OR room_id = '9';
+
+UPDATE lesson SET genre = 'edm', min_students = '3', max_students = '40'
+WHERE lesson_type = 'group'
+AND room_id = '10';
+
+UPDATE lesson SET instrument_type = 'percussion', min_students = '3', max_students = '40'
+WHERE lesson_type = 'group'
+AND room_id = '1' OR room_id = '2' OR room_id = '3';
+
+UPDATE lesson SET instrument_type = 'wind', min_students = '3', max_students = '40'
+WHERE lesson_type = 'group'
+AND room_id = '4' OR room_id = '5' OR room_id = '6';
+
+UPDATE lesson SET instrument_type = 'stringed', min_students = '3', max_students = '40'
+WHERE lesson_type = 'group'
+AND room_id = '7' OR room_id = '8' OR room_id = '9';
+
+UPDATE lesson SET instrument_type = 'electronic', min_students = '3', max_students = '40'
+WHERE lesson_type = 'group'
+AND room_id = '10';
+
+UPDATE lesson SET instrument_type = 'percussion', min_students = '1', max_students = '1'
+WHERE lesson_type = 'individual'
+AND room_id = '1' OR room_id = '2' OR room_id = '3';
+
+UPDATE lesson SET instrument_type = 'wind', min_students = '1', max_students = '1'
+WHERE lesson_type = 'individual'
+AND room_id = '4' OR room_id = '5' OR room_id = '6';
+
+UPDATE lesson SET instrument_type = 'stringed', min_students = '1', max_students = '1'
+WHERE lesson_type = 'individual'
+AND room_id = '7' OR room_id = '8' OR room_id = '9';
+
+UPDATE lesson SET instrument_type = 'electronic', min_students = '1', max_students = '1'
+WHERE lesson_type = 'individual'
+AND room_id = '10';
+
+-- updates to instrument
+UPDATE instrument SET type = 'percussion'
+WHERE instrument = 'cowbell'
+OR instrument = 'triangle'
+OR instrument = 'drums';
+
+UPDATE instrument SET type = 'wind'
+WHERE instrument = 'flute'
+OR instrument = 'clarinet';
+
+UPDATE instrument SET type = 'stringed'
+WHERE instrument = 'piano'
+OR instrument = 'guitar';
+
+UPDATE instrument SET instrument = 'electric guitar'
+WHERE instrument = 'tambourine';
+
+UPDATE instrument SET type = 'electric'
+WHERE instrument = 'electric guitar';
+
+
+
+
+
+-- rental
+INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
+VALUES
+  ('22-08-19','12_months','true',148,39,19),
+  ('22-11-21','12_months','true',217,75,58),
+  ('22-07-16','12_months','true',299,6,59),
+  ('23-09-06','12_months','true',225,94,19),
+  ('22-02-04','12_months','false',199,57,28),
+  ('23-01-02','12_months','true',120,48,45),
+  ('22-08-22','12_months','false',135,17,2),
+  ('23-10-08','12_months','false',239,98,62),
+  ('21-12-09','12_months','false',226,89,3),
+  ('22-08-11','12_months','true',184,12,35),
+  ('22-07-13','12_months','false',153,41,13),
+  ('23-07-10','12_months','false',269,12,50),
+  ('23-06-09','12_months','false',132,24,31),
+  ('22-08-02','12_months','false',123,35,16),
+  ('21-12-19','12_months','true',206,20,27);
+INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
+VALUES
+  ('23-07-08','12_months','false',191,7,6),
+  ('23-07-09','12_months','false',289,44,28),
+  ('22-04-18','12_months','false',237,87,30),
+  ('22-03-09','12_months','true',180,29,12),
+  ('22-01-12','12_months','false',289,98,44),
+  ('22-09-11','12_months','false',181,58,47),
+  ('22-03-12','12_months','false',287,3,19),
+  ('22-09-27','12_months','true',285,23,41),
+  ('23-03-23','12_months','true',111,49,52),
+  ('22-01-26','12_months','false',265,10,25),
+  ('22-03-28','12_months','true',291,16,66),
+  ('22-10-09','12_months','false',186,75,11),
+  ('23-07-11','12_months','false',247,97,64),
+  ('23-03-19','12_months','false',273,82,42),
+  ('22-05-04','12_months','true',219,92,35);
+INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
+VALUES
+  ('23-04-03','12_months','false',222,72,42),
+  ('23-01-10','12_months','false',147,18,24),
+  ('23-03-03','12_months','true',234,62,58),
+  ('23-04-06','12_months','false',215,99,43),
+  ('23-05-10','12_months','true',193,1,58),
+  ('22-01-19','12_months','false',169,35,35),
+  ('23-01-21','12_months','false',145,64,62),
+  ('22-02-13','12_months','false',108,64,35),
+  ('23-04-24','12_months','true',181,40,34),
+  ('21-12-02','12_months','true',265,99,47),
+  ('21-12-04','12_months','true',171,41,37),
+  ('22-06-04','12_months','true',234,25,33),
+  ('23-07-04','12_months','false',250,93,68),
+  ('23-06-06','12_months','false',267,12,35),
+  ('22-01-06','12_months','true',148,79,69);
+INSERT INTO rental (starting_date,lease_period,wants_home_delivery,rental_price,instrument_id,student_id)
+VALUES
+  ('23-09-18','12_months','false',144,23,47),
+  ('23-11-19','12_months','true',241,24,36),
+  ('23-01-27','12_months','false',256,29,58),
+  ('22-03-10','12_months','true',142,76,15),
+  ('22-06-29','12_months','false',289,75,58);
+
+
+
 
 -- can_teach_instrument
 INSERT INTO can_teach_instrument (teacher_id,instrument)
@@ -1012,502 +1514,3 @@ VALUES
   (13,'clarinet'),
   (8,'keyboard'),
   (15,'clarinet');
-
-
--- lesson
-
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (4,'ensemble','22-10-16','13:00','null','null','null','null',1,97,12,2),
-  (2,'ensemble','22-06-06','17:50','null','null','null','null',1,91,9,2),
-  (5,'ensemble','22-04-12','16:21','null','null','null','null',1,91,15,1),
-  (2,'group','23-10-31','15:08','null','null','null','null',1,99,15,2),
-  (5,'ensemble','22-03-30','06:45','null','null','null','null',1,93,12,3),
-  (10,'group','23-08-20','13:53','null','null','null','null',1,93,3,3),
-  (4,'group','23-07-11','10:54','null','null','null','null',1,96,13,1),
-  (6,'ensemble','23-01-17','16:36','null','null','null','null',1,97,12,2),
-  (1,'group','22-07-11','12:31','null','null','null','null',1,92,14,3),
-  (4,'group','22-12-26','19:16','null','null','null','null',1,99,3,2),
-  (2,'individual','22-10-18','11:46','null','null','null','null',1,94,7,2),
-  (10,'group','23-06-25','06:17','null','null','null','null',1,93,2,1),
-  (4,'group','22-08-16','14:35','null','null','null','null',1,98,5,3),
-  (8,'ensemble','22-05-01','17:32','null','null','null','null',1,96,6,2),
-  (4,'individual','23-05-31','09:36','null','null','null','null',1,93,4,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (6,'individual','23-07-29','11:00','null','null','null','null',1,90,8,2),
-  (7,'group','22-08-08','06:35','null','null','null','null',1,97,5,3),
-  (6,'individual','23-02-05','13:03','null','null','null','null',1,95,13,2),
-  (8,'group','23-09-29','08:18','null','null','null','null',1,96,1,2),
-  (10,'group','22-06-15','08:58','null','null','null','null',1,95,12,2),
-  (3,'group','23-07-13','18:18','null','null','null','null',1,99,10,1),
-  (3,'individual','22-06-25','16:38','null','null','null','null',1,97,12,3),
-  (3,'group','23-01-06','19:00','null','null','null','null',1,90,7,3),
-  (7,'ensemble','23-02-15','13:15','null','null','null','null',1,91,4,2),
-  (7,'ensemble','22-10-06','08:13','null','null','null','null',1,100,11,3),
-  (3,'ensemble','22-07-18','08:53','null','null','null','null',1,92,2,2),
-  (9,'group','22-05-22','20:12','null','null','null','null',1,97,11,3),
-  (9,'ensemble','23-10-17','14:08','null','null','null','null',1,98,3,2),
-  (5,'group','22-08-31','19:40','null','null','null','null',1,96,7,2),
-  (9,'group','23-04-13','12:14','null','null','null','null',1,97,10,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (5,'individual','23-10-16','15:58','null','null','null','null',1,95,4,2),
-  (8,'individual','23-04-12','06:46','null','null','null','null',1,94,9,2),
-  (4,'group','23-10-04','19:48','null','null','null','null',1,91,11,2),
-  (5,'ensemble','23-11-03','11:03','null','null','null','null',1,94,13,3),
-  (5,'ensemble','23-01-06','10:26','null','null','null','null',1,99,12,2),
-  (8,'ensemble','22-08-02','09:04','null','null','null','null',1,98,7,2),
-  (8,'ensemble','23-10-20','17:01','null','null','null','null',1,91,14,2),
-  (2,'group','23-01-13','13:34','null','null','null','null',1,100,11,3),
-  (9,'ensemble','22-11-10','18:22','null','null','null','null',1,99,2,3),
-  (2,'individual','23-01-06','19:47','null','null','null','null',1,99,9,2),
-  (6,'individual','22-11-26','09:23','null','null','null','null',1,96,13,2),
-  (2,'ensemble','23-11-13','20:12','null','null','null','null',1,91,13,2),
-  (3,'individual','23-01-03','13:14','null','null','null','null',1,95,3,3),
-  (2,'ensemble','23-07-21','19:31','null','null','null','null',1,92,11,2),
-  (2,'individual','23-11-14','15:13','null','null','null','null',1,93,5,3);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'ensemble','22-09-19','20:14','null','null','null','null',1,92,11,1),
-  (7,'individual','22-10-11','08:08','null','null','null','null',1,96,10,1),
-  (9,'individual','22-08-04','14:01','null','null','null','null',1,92,8,2),
-  (3,'group','23-10-15','20:11','null','null','null','null',1,100,6,1),
-  (2,'individual','22-07-26','16:55','null','null','null','null',1,96,1,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (6,'ensemble','23-01-21','08:04','null','null','null','null',1,99,2,3),
-  (9,'ensemble','23-02-28','07:30','null','null','null','null',1,97,7,1),
-  (8,'individual','22-03-23','09:54','null','null','null','null',1,100,8,2),
-  (10,'individual','22-11-19','07:35','null','null','null','null',1,90,11,2),
-  (6,'ensemble','22-05-06','12:35','null','null','null','null',1,95,10,2),
-  (4,'group','23-07-03','17:10','null','null','null','null',1,94,2,1),
-  (9,'group','22-03-07','08:37','null','null','null','null',1,95,1,2),
-  (2,'ensemble','22-11-22','09:00','null','null','null','null',1,91,8,1),
-  (4,'individual','23-10-24','18:22','null','null','null','null',1,95,3,3),
-  (7,'ensemble','23-01-20','07:00','null','null','null','null',1,97,5,1),
-  (1,'individual','23-02-23','17:48','null','null','null','null',1,92,14,2),
-  (2,'group','22-04-14','07:31','null','null','null','null',1,100,12,3),
-  (7,'group','23-02-04','08:45','null','null','null','null',1,92,12,2),
-  (5,'individual','22-05-25','16:02','null','null','null','null',1,96,7,2),
-  (6,'individual','22-10-09','17:29','null','null','null','null',1,93,10,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (6,'individual','22-12-25','20:35','null','null','null','null',1,94,6,3),
-  (4,'ensemble','22-04-12','07:59','null','null','null','null',1,97,10,3),
-  (3,'ensemble','22-09-30','13:57','null','null','null','null',1,94,12,2),
-  (6,'group','23-10-27','13:57','null','null','null','null',1,98,3,3),
-  (5,'group','23-05-20','07:16','null','null','null','null',1,95,3,1),
-  (4,'individual','23-05-10','13:10','null','null','null','null',1,90,3,3),
-  (1,'ensemble','23-02-17','18:20','null','null','null','null',1,93,10,1),
-  (10,'individual','23-10-27','16:41','null','null','null','null',1,97,10,3),
-  (6,'group','23-01-18','10:27','null','null','null','null',1,100,9,3),
-  (8,'ensemble','22-12-22','09:26','null','null','null','null',1,100,5,3),
-  (9,'ensemble','23-11-06','16:10','null','null','null','null',1,99,9,2),
-  (4,'ensemble','22-10-30','09:26','null','null','null','null',1,97,8,3),
-  (1,'ensemble','23-01-29','14:02','null','null','null','null',1,98,7,2),
-  (4,'ensemble','23-06-24','19:09','null','null','null','null',1,99,11,3),
-  (6,'group','22-06-20','06:16','null','null','null','null',1,92,8,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (1,'ensemble','23-06-16','16:31','null','null','null','null',1,92,8,2),
-  (1,'ensemble','23-01-30','09:02','null','null','null','null',1,93,12,2),
-  (6,'ensemble','22-09-29','20:59','null','null','null','null',1,99,3,2),
-  (9,'ensemble','22-07-20','10:02','null','null','null','null',1,92,15,3),
-  (4,'group','22-07-24','17:39','null','null','null','null',1,90,11,2),
-  (2,'group','23-09-10','12:45','null','null','null','null',1,99,11,2),
-  (2,'ensemble','22-10-05','18:06','null','null','null','null',1,93,9,2),
-  (4,'ensemble','22-04-29','06:43','null','null','null','null',1,93,5,2),
-  (10,'group','22-11-20','11:16','null','null','null','null',1,91,8,2),
-  (5,'ensemble','23-06-16','07:31','null','null','null','null',1,91,3,2),
-  (8,'ensemble','22-08-02','17:50','null','null','null','null',1,98,11,2),
-  (8,'group','23-07-08','10:22','null','null','null','null',1,100,2,2),
-  (3,'ensemble','23-01-05','12:35','null','null','null','null',1,95,2,1),
-  (9,'individual','23-11-19','13:22','null','null','null','null',1,91,15,2),
-  (3,'ensemble','23-09-23','16:58','null','null','null','null',1,92,13,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'ensemble','23-10-22','08:50','null','null','null','null',1,95,9,1),
-  (3,'group','23-07-05','18:35','null','null','null','null',1,97,3,2),
-  (4,'ensemble','23-01-01','20:42','null','null','null','null',1,98,12,2),
-  (6,'group','22-06-04','09:42','null','null','null','null',1,90,14,2),
-  (8,'ensemble','23-09-30','11:38','null','null','null','null',1,99,9,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'group','23-04-30','17:52','null','null','null','null',1,96,13,1),
-  (4,'individual','22-03-08','16:17','null','null','null','null',1,92,10,2),
-  (2,'ensemble','23-07-20','17:40','null','null','null','null',1,97,13,2),
-  (2,'group','23-07-02','09:31','null','null','null','null',1,96,4,3),
-  (7,'individual','23-01-14','07:10','null','null','null','null',1,94,3,2),
-  (9,'group','22-04-02','08:44','null','null','null','null',1,95,1,2),
-  (7,'ensemble','23-05-05','06:14','null','null','null','null',1,94,2,3),
-  (4,'ensemble','23-01-27','15:11','null','null','null','null',1,94,7,2),
-  (5,'ensemble','22-11-30','11:53','null','null','null','null',1,97,8,3),
-  (3,'individual','23-02-04','13:03','null','null','null','null',1,92,12,2),
-  (9,'individual','23-09-13','19:41','null','null','null','null',1,100,5,3),
-  (6,'individual','23-09-19','08:03','null','null','null','null',1,95,12,3),
-  (5,'individual','23-07-19','12:14','null','null','null','null',1,96,3,3),
-  (7,'ensemble','22-10-12','06:03','null','null','null','null',1,93,14,2),
-  (8,'group','23-08-19','12:02','null','null','null','null',1,91,10,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (8,'individual','23-09-17','17:00','null','null','null','null',1,93,12,3),
-  (6,'individual','22-04-22','13:56','null','null','null','null',1,93,2,2),
-  (3,'individual','22-05-31','14:29','null','null','null','null',1,97,9,3),
-  (2,'ensemble','23-03-09','06:53','null','null','null','null',1,98,13,1),
-  (5,'individual','23-02-08','07:45','null','null','null','null',1,96,7,3),
-  (1,'group','23-07-18','15:27','null','null','null','null',1,98,4,3),
-  (3,'individual','23-09-08','08:02','null','null','null','null',1,96,8,1),
-  (7,'ensemble','22-07-25','10:01','null','null','null','null',1,98,15,2),
-  (4,'group','23-06-16','10:45','null','null','null','null',1,95,13,3),
-  (8,'group','23-11-02','14:49','null','null','null','null',1,95,9,2),
-  (1,'group','23-10-03','06:02','null','null','null','null',1,98,6,1),
-  (9,'individual','23-03-21','19:39','null','null','null','null',1,98,11,2),
-  (7,'group','22-06-16','15:23','null','null','null','null',1,98,8,2),
-  (7,'ensemble','23-04-25','12:21','null','null','null','null',1,95,13,1),
-  (8,'individual','22-09-14','07:47','null','null','null','null',1,98,4,3);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (1,'group','23-07-31','06:11','null','null','null','null',1,93,11,1),
-  (6,'group','22-10-18','13:16','null','null','null','null',1,97,6,2),
-  (9,'ensemble','23-09-08','13:42','null','null','null','null',1,91,7,2),
-  (5,'ensemble','23-02-15','17:25','null','null','null','null',1,95,10,3),
-  (9,'group','23-03-19','10:17','null','null','null','null',1,91,12,2),
-  (7,'group','23-04-24','13:51','null','null','null','null',1,99,13,2),
-  (2,'individual','22-07-11','07:03','null','null','null','null',1,92,2,1),
-  (1,'ensemble','23-10-15','11:48','null','null','null','null',1,99,2,2),
-  (2,'ensemble','22-06-24','06:58','null','null','null','null',1,97,6,3),
-  (4,'group','23-09-14','19:32','null','null','null','null',1,96,13,2),
-  (7,'group','22-09-25','19:40','null','null','null','null',1,92,9,3),
-  (2,'group','22-10-27','20:35','null','null','null','null',1,98,10,2),
-  (4,'group','22-08-02','20:49','null','null','null','null',1,94,9,2),
-  (6,'individual','23-07-30','06:50','null','null','null','null',1,94,15,1),
-  (7,'individual','23-07-23','09:50','null','null','null','null',1,92,14,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (9,'individual','23-09-10','08:37','null','null','null','null',1,97,11,2),
-  (6,'individual','23-03-24','16:12','null','null','null','null',1,97,9,1),
-  (6,'group','22-03-18','06:29','null','null','null','null',1,96,8,2),
-  (4,'individual','22-08-15','20:20','null','null','null','null',1,91,12,3),
-  (7,'individual','23-04-18','19:03','null','null','null','null',1,94,14,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'individual','23-11-08','12:21','null','null','null','null',1,91,3,2),
-  (4,'individual','22-05-31','11:44','null','null','null','null',1,91,13,1),
-  (2,'group','23-07-08','12:09','null','null','null','null',1,94,6,2),
-  (8,'ensemble','22-10-05','16:39','null','null','null','null',1,97,8,2),
-  (6,'individual','22-06-07','17:04','null','null','null','null',1,95,3,3),
-  (1,'individual','22-04-12','16:24','null','null','null','null',1,91,9,2),
-  (2,'individual','23-03-10','09:51','null','null','null','null',1,99,11,3),
-  (4,'group','22-09-06','12:03','null','null','null','null',1,91,2,2),
-  (8,'group','22-04-10','17:36','null','null','null','null',1,92,10,3),
-  (8,'ensemble','23-05-15','14:24','null','null','null','null',1,97,7,2),
-  (2,'group','23-07-26','14:16','null','null','null','null',1,96,10,1),
-  (3,'group','22-10-10','20:36','null','null','null','null',1,90,6,3),
-  (5,'ensemble','23-03-27','11:31','null','null','null','null',1,98,11,2),
-  (8,'ensemble','22-08-14','06:16','null','null','null','null',1,93,1,2),
-  (5,'group','22-10-20','19:45','null','null','null','null',1,97,10,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'ensemble','22-12-24','11:46','null','null','null','null',1,97,4,2),
-  (2,'group','23-09-08','20:48','null','null','null','null',1,98,9,1),
-  (1,'group','23-09-02','14:43','null','null','null','null',1,96,5,2),
-  (10,'group','22-07-16','14:40','null','null','null','null',1,94,8,3),
-  (6,'group','22-04-13','09:06','null','null','null','null',1,93,10,2),
-  (6,'group','22-07-24','16:38','null','null','null','null',1,91,6,2),
-  (8,'ensemble','22-09-25','20:48','null','null','null','null',1,94,12,2),
-  (5,'group','23-07-17','09:27','null','null','null','null',1,95,6,3),
-  (3,'group','23-07-05','11:56','null','null','null','null',1,97,12,3),
-  (4,'individual','23-01-10','13:48','null','null','null','null',1,96,9,2),
-  (8,'individual','23-08-13','08:50','null','null','null','null',1,97,15,2),
-  (6,'group','22-12-25','17:00','null','null','null','null',1,91,4,2),
-  (4,'individual','22-10-29','19:30','null','null','null','null',1,98,1,2),
-  (9,'ensemble','23-01-17','12:58','null','null','null','null',1,96,2,3),
-  (4,'individual','23-09-27','20:00','null','null','null','null',1,96,11,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (9,'ensemble','22-08-08','19:15','null','null','null','null',1,92,2,2),
-  (1,'individual','23-05-03','10:52','null','null','null','null',1,95,9,2),
-  (6,'individual','22-03-08','08:21','null','null','null','null',1,93,11,3),
-  (1,'group','23-06-19','17:03','null','null','null','null',1,97,13,1),
-  (9,'group','23-08-26','11:03','null','null','null','null',1,100,10,3),
-  (3,'ensemble','23-06-19','16:53','null','null','null','null',1,91,4,2),
-  (1,'ensemble','23-10-01','13:30','null','null','null','null',1,94,5,2),
-  (4,'group','22-11-14','17:09','null','null','null','null',1,90,13,2),
-  (4,'group','23-09-15','11:34','null','null','null','null',1,90,2,3),
-  (4,'ensemble','23-08-27','17:55','null','null','null','null',1,92,2,3),
-  (5,'individual','23-11-12','19:02','null','null','null','null',1,98,6,2),
-  (6,'group','22-05-20','07:40','null','null','null','null',1,94,8,2),
-  (3,'individual','23-07-05','12:06','null','null','null','null',1,92,10,3),
-  (4,'group','23-05-04','17:13','null','null','null','null',1,99,5,2),
-  (8,'individual','23-08-18','14:32','null','null','null','null',1,97,4,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'group','23-08-20','15:39','null','null','null','null',1,93,14,1),
-  (7,'individual','22-03-04','16:20','null','null','null','null',1,93,11,2),
-  (3,'individual','22-07-06','08:30','null','null','null','null',1,93,3,1),
-  (5,'individual','23-08-29','10:07','null','null','null','null',1,98,15,2),
-  (5,'ensemble','23-11-02','20:06','null','null','null','null',1,97,7,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (8,'individual','22-06-07','19:34','null','null','null','null',1,94,7,2),
-  (8,'group','23-04-27','11:19','null','null','null','null',1,96,3,1),
-  (8,'group','23-01-21','12:27','null','null','null','null',1,92,6,1),
-  (3,'group','23-10-12','08:25','null','null','null','null',1,98,8,2),
-  (8,'group','23-09-24','20:09','null','null','null','null',1,96,11,2),
-  (3,'individual','22-03-23','11:49','null','null','null','null',1,91,14,3),
-  (8,'individual','22-07-24','20:45','null','null','null','null',1,95,4,2),
-  (9,'ensemble','23-08-23','12:52','null','null','null','null',1,94,7,2),
-  (7,'ensemble','22-08-14','10:38','null','null','null','null',1,93,8,2),
-  (4,'individual','23-10-23','12:30','null','null','null','null',1,94,15,2),
-  (1,'individual','23-05-08','17:03','null','null','null','null',1,90,4,1),
-  (7,'individual','22-07-24','12:07','null','null','null','null',1,95,6,3),
-  (8,'individual','23-08-09','18:57','null','null','null','null',1,97,13,3),
-  (6,'ensemble','22-05-16','17:09','null','null','null','null',1,92,3,3),
-  (4,'individual','23-06-17','14:35','null','null','null','null',1,92,2,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (5,'group','22-07-24','12:05','null','null','null','null',1,92,10,2),
-  (1,'group','22-04-30','14:44','null','null','null','null',1,99,13,2),
-  (7,'individual','22-03-08','17:32','null','null','null','null',1,95,10,1),
-  (9,'ensemble','23-08-24','16:37','null','null','null','null',1,99,3,2),
-  (7,'ensemble','23-05-01','19:59','null','null','null','null',1,98,4,2),
-  (7,'group','23-11-15','11:13','null','null','null','null',1,91,8,2),
-  (2,'ensemble','22-03-02','12:11','null','null','null','null',1,91,7,3),
-  (6,'group','23-08-11','14:54','null','null','null','null',1,97,3,2),
-  (3,'ensemble','23-07-07','08:42','null','null','null','null',1,96,8,3),
-  (4,'individual','23-08-28','18:28','null','null','null','null',1,99,9,2),
-  (3,'individual','23-09-27','18:55','null','null','null','null',1,97,6,2),
-  (2,'ensemble','22-09-11','17:55','null','null','null','null',1,99,9,1),
-  (6,'ensemble','22-11-30','19:59','null','null','null','null',1,97,9,1),
-  (7,'group','23-06-18','10:59','null','null','null','null',1,94,3,1),
-  (2,'ensemble','23-02-12','11:09','null','null','null','null',1,97,10,2);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (5,'individual','23-07-28','08:37','null','null','null','null',1,95,7,3),
-  (3,'group','23-06-07','16:21','null','null','null','null',1,94,12,2),
-  (8,'group','23-06-21','14:21','null','null','null','null',1,99,3,1),
-  (6,'group','23-02-21','15:21','null','null','null','null',1,96,15,2),
-  (1,'ensemble','23-09-01','12:29','null','null','null','null',1,97,2,2),
-  (8,'ensemble','22-12-22','16:17','null','null','null','null',1,91,7,3),
-  (6,'ensemble','23-02-06','10:07','null','null','null','null',1,95,6,2),
-  (6,'ensemble','22-04-10','12:57','null','null','null','null',1,100,10,2),
-  (5,'individual','23-06-06','17:12','null','null','null','null',1,100,3,2),
-  (7,'ensemble','22-09-30','16:58','null','null','null','null',1,96,8,2),
-  (5,'group','22-11-15','07:56','null','null','null','null',1,95,8,1),
-  (5,'ensemble','22-12-13','11:23','null','null','null','null',1,97,12,3),
-  (5,'ensemble','22-06-03','12:30','null','null','null','null',1,95,10,2),
-  (8,'ensemble','23-11-12','07:35','null','null','null','null',1,94,10,2),
-  (5,'individual','22-12-19','06:36','null','null','null','null',1,98,14,3);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (10,'group','22-07-31','06:02','null','null','null','null',1,91,4,2),
-  (1,'individual','23-02-02','18:27','null','null','null','null',1,93,2,1),
-  (6,'group','23-05-21','08:57','null','null','null','null',1,92,5,1),
-  (4,'group','22-09-14','11:35','null','null','null','null',1,97,2,2),
-  (9,'ensemble','23-07-25','15:25','null','null','null','null',1,99,13,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (3,'group','22-07-08','20:58','null','null','null','null',1,90,7,2),
-  (2,'group','23-04-09','06:57','null','null','null','null',1,95,9,3),
-  (5,'ensemble','23-08-11','13:21','null','null','null','null',1,93,3,3),
-  (2,'group','23-10-22','07:36','null','null','null','null',1,92,8,2),
-  (2,'individual','22-11-18','17:00','null','null','null','null',1,91,1,3),
-  (8,'individual','22-11-24','13:14','null','null','null','null',1,91,11,1),
-  (3,'group','22-09-29','06:09','null','null','null','null',1,100,2,1),
-  (8,'ensemble','22-04-09','20:10','null','null','null','null',1,99,10,3),
-  (5,'ensemble','23-03-08','12:17','null','null','null','null',1,94,4,2),
-  (9,'individual','22-12-29','13:08','null','null','null','null',1,94,2,1),
-  (3,'individual','23-02-11','10:12','null','null','null','null',1,97,10,1),
-  (4,'group','22-09-28','16:22','null','null','null','null',1,95,3,2),
-  (1,'ensemble','23-05-19','11:58','null','null','null','null',1,98,3,2),
-  (2,'group','23-07-25','14:48','null','null','null','null',1,96,9,2),
-  (2,'group','23-08-24','07:55','null','null','null','null',1,91,5,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (9,'group','23-07-16','11:01','null','null','null','null',1,95,4,1),
-  (7,'group','22-08-04','19:43','null','null','null','null',1,97,6,2),
-  (3,'ensemble','23-09-10','07:45','null','null','null','null',1,95,10,1),
-  (3,'group','23-07-03','11:38','null','null','null','null',1,99,3,2),
-  (1,'ensemble','23-09-19','16:09','null','null','null','null',1,98,1,1),
-  (3,'group','23-03-23','15:01','null','null','null','null',1,93,14,2),
-  (4,'ensemble','23-07-24','15:02','null','null','null','null',1,93,9,3),
-  (6,'individual','22-10-13','10:22','null','null','null','null',1,95,12,3),
-  (9,'individual','22-08-30','16:24','null','null','null','null',1,91,9,2),
-  (5,'group','23-08-03','11:48','null','null','null','null',1,99,10,2),
-  (10,'ensemble','22-05-03','20:14','null','null','null','null',1,100,9,2),
-  (6,'ensemble','23-06-20','15:30','null','null','null','null',1,96,15,1),
-  (9,'individual','23-11-06','10:26','null','null','null','null',1,99,8,2),
-  (6,'group','23-03-29','19:30','null','null','null','null',1,95,5,3),
-  (4,'group','23-04-18','15:53','null','null','null','null',1,93,7,3);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (7,'ensemble','22-12-19','19:34','null','null','null','null',1,95,6,1),
-  (10,'ensemble','22-10-04','13:39','null','null','null','null',1,97,5,3),
-  (5,'individual','22-11-16','08:34','null','null','null','null',1,98,13,1),
-  (9,'ensemble','22-12-06','16:42','null','null','null','null',1,92,9,2),
-  (3,'individual','23-06-26','08:23','null','null','null','null',1,98,4,3),
-  (6,'ensemble','23-11-09','07:59','null','null','null','null',1,95,6,1),
-  (3,'group','22-08-14','07:34','null','null','null','null',1,94,9,3),
-  (6,'ensemble','22-03-10','08:21','null','null','null','null',1,93,3,3),
-  (4,'ensemble','23-01-01','08:38','null','null','null','null',1,96,10,1),
-  (5,'group','22-12-28','11:50','null','null','null','null',1,96,4,2),
-  (6,'group','23-01-12','13:58','null','null','null','null',1,94,15,1),
-  (1,'group','23-11-10','08:10','null','null','null','null',1,92,14,1),
-  (9,'group','23-08-07','11:16','null','null','null','null',1,90,15,2),
-  (3,'group','22-12-07','07:32','null','null','null','null',1,96,9,1),
-  (3,'group','22-12-30','07:28','null','null','null','null',1,95,10,1);
-INSERT INTO lesson (room_id,lesson_type,date,time,instrument_type,genre,min_students,max_students,pricing_scheme_id,adress_id,teacher_id,skill_level_id)
-VALUES
-  (7,'ensemble','23-05-09','09:00','null','null','null','null',1,96,9,2),
-  (2,'individual','23-08-15','12:24','null','null','null','null',1,91,7,2),
-  (7,'group','23-06-25','20:43','null','null','null','null',1,97,7,3),
-  (9,'group','22-03-21','19:39','null','null','null','null',1,97,5,3),
-  (9,'group','23-03-19','09:58','null','null','null','null',1,100,9,2);
-
-
-
--- instrument
-
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Fowler','JK652JDG','null','triangle','false'),
-  ('Castaneda','SU843DSS','null','cowbell','true'),
-  ('Dorsey','XI346BIO','null','clarinet','true'),
-  ('Lawson','TC558VMH','null','clarinet','false'),
-  ('Moon','GO516ZWM','null','clarinet','true'),
-  ('Dickson','XI457CKW','null','flute','true'),
-  ('Guerra','DU373GNT','null','cowbell','true'),
-  ('Graves','DV263RCU','null','clarinet','false'),
-  ('Weaver','IB463QUF','null','piano','true'),
-  ('Hendricks','VN198OVP','null','cowbell','false'),
-  ('Yates','RY218JMD','null','drums','false'),
-  ('West','CV187XSP','null','guitar','false'),
-  ('Reed','SR715WCY','null','cowbell','true'),
-  ('Prince','PA167UQR','null','triangle','false'),
-  ('Finley','CO666HQW','null','tambourine','true');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Cole','MX132OZP','null','piano','true'),
-  ('Pugh','QR026QBW','null','drums','true'),
-  ('Brooks','RH437HPP','null','piano','true'),
-  ('Aguilar','QX811UPW','null','guitar','false'),
-  ('Calderon','BW255LXH','null','flute','false'),
-  ('Yang','FU632GON','null','piano','true'),
-  ('French','NV586BWM','null','piano','true'),
-  ('Harrison','NI109HBC','null','piano','true'),
-  ('Castaneda','NY642OEX','null','piano','false'),
-  ('Nash','FH637BNQ','null','piano','true'),
-  ('Dillard','HW318JNJ','null','clarinet','false'),
-  ('Morales','YP894EET','null','drums','false'),
-  ('Bowers','WJ521VRQ','null','flute','true'),
-  ('Kane','QK665IXQ','null','tambourine','true'),
-  ('Rowland','YT721PJV','null','clarinet','true');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Cole','BM142IIQ','null','flute','false'),
-  ('Jones','KB712TRT','null','guitar','true'),
-  ('Baker','QP673MOV','null','drums','false'),
-  ('Clayton','ID368SHQ','null','flute','false'),
-  ('Glover','LN186EIY','null','cowbell','true'),
-  ('Moore','CS813LGO','null','piano','true'),
-  ('Boyer','VJ428SXQ','null','piano','false'),
-  ('Walton','BW124DOF','null','guitar','false'),
-  ('Francis','YC337ALY','null','clarinet','false'),
-  ('Mcdowell','RI839RYY','null','guitar','false'),
-  ('Ryan','QQ108WIP','null','flute','true'),
-  ('Evans','BZ342WLI','null','clarinet','false'),
-  ('Guthrie','IQ168EYN','null','cowbell','true'),
-  ('Carson','MW757XKL','null','drums','false'),
-  ('Torres','RN314PWQ','null','guitar','false');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('James','SF971TLL','null','cowbell','false'),
-  ('Lott','LE678YQV','null','drums','false'),
-  ('Hines','CP110LFS','null','triangle','false'),
-  ('Foster','II804KEI','null','piano','true'),
-  ('Ellis','PJ458GLY','null','drums','false');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Adams','SD117XIK','null','flute','false'),
-  ('Austin','RG418WHI','null','drums','false'),
-  ('Gibson','NC651ESK','null','flute','true'),
-  ('Reeves','NP080NXH','null','cowbell','false'),
-  ('Henry','RT176WKH','null','clarinet','true'),
-  ('Spence','KR642LAL','null','tambourine','false'),
-  ('Burch','GD479RNI','null','clarinet','false'),
-  ('Stanley','LF778CNV','null','cowbell','true'),
-  ('Rodgers','JM312SOT','null','cowbell','false'),
-  ('Skinner','VD628YIN','null','piano','true'),
-  ('Huber','UO351UIE','null','tambourine','true'),
-  ('Hurley','KX823OFU','null','cowbell','false'),
-  ('Navarro','MO626VVO','null','triangle','true'),
-  ('Cooke','BY732SLN','null','piano','true'),
-  ('Fuller','VS242RSM','null','piano','false');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Phillips','TO217EBH','null','guitar','false'),
-  ('Giles','WH563ESZ','null','clarinet','true'),
-  ('Russell','OO345LWV','null','triangle','false'),
-  ('Morgan','NP846LNA','null','tambourine','false'),
-  ('Mcneil','MV241HWP','null','triangle','false'),
-  ('Grimes','OH942DIN','null','cowbell','true'),
-  ('Owens','AQ118WVH','null','guitar','true'),
-  ('Mckay','IQ795ELC','null','guitar','true'),
-  ('Wright','CL324FFB','null','guitar','true'),
-  ('Kennedy','WU697LLD','null','clarinet','false'),
-  ('Guerra','JH286PCQ','null','piano','true'),
-  ('Farrell','XR412EBP','null','drums','true'),
-  ('Mueller','WI898YIX','null','triangle','false'),
-  ('Neal','WL244WNK','null','piano','false'),
-  ('Delacruz','MA615QVC','null','clarinet','false');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Curry','BO800GYL','null','tambourine','false'),
-  ('Ashley','QN953OBO','null','flute','true'),
-  ('Durham','RC703HUM','null','triangle','false'),
-  ('Leon','NZ250VII','null','triangle','false'),
-  ('Wooten','OF205SYY','null','triangle','true'),
-  ('Carson','KA625HTI','null','clarinet','false'),
-  ('Bennett','TX951OBO','null','guitar','true'),
-  ('Donovan','QC100HBT','null','piano','true'),
-  ('Beasley','UC681XIS','null','tambourine','true'),
-  ('Arnold','ER122CNY','null','tambourine','false'),
-  ('Lang','TR512BES','null','triangle','false'),
-  ('Farley','EB167GER','null','tambourine','false'),
-  ('Vaughn','KG682YHL','null','piano','true'),
-  ('Castro','XU363TIW','null','triangle','true'),
-  ('Callahan','JF683GNY','null','cowbell','true');
-INSERT INTO instrument (brand,model,type,instrument,in_stock)
-VALUES
-  ('Small','JI573HFF','null','piano','false'),
-  ('Avila','SS372GIO','null','cowbell','false'),
-  ('Rowland','JA995MLY','null','cowbell','false'),
-  ('Mitchell','SF753QAW','null','triangle','true'),
-  ('Knight','JK787UVO','null','cowbell','true');
-
--- sibling_person_number
-
-INSERT INTO sibling_person_number (student_id,sibling_person_number)
-VALUES
-  (66,'492708415769'),
-  (3,'637711634445'),
-  (17,'468185923656'),
-  (3,'770587248801'),
-  (29,'144975044167'),
-  (68,'532301651855'),
-  (24,'866166124238'),
-  (40,'373833538141'),
-  (18,'235737432560'),
-  (54,'532301651855'),
-  (66,'882047723234'),
-  (13,'284937554361'),
-  (46,'787062614886'),
-  (62,'101304918036');
-INSERT INTO sibling_person_number (student_id,sibling_person_number)
-VALUES
-  (13,'532301651855'),
-  (18,'532301651855'),
-  (31,'666368736493'),
-  (52,'224822735438'),
-  (3,'532301651855');
